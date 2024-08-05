@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.Intro h1 {
+    text-align: center;
+}
+.desc {
+    color: var(--textSoft);
+    text-align: center;
+}
+
+.Image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}

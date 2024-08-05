@@ -1,0 +1,46 @@
+:root {
+    --bg: rgb(18, 18, 18);
+    --text: white;
+    --textSoft: #6f7277;
+    --btnSoft: #212c40;
+    --btn: #4b6cf7;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    min-height: 100vh;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.PageNotFound {
+    color: #4b6cf7;
+}
+
+.pagenotfounddiv {
+    text-align: center;
+}
+
+.errorpagediv {
+    text-align: center;
+}

@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+    height: 90px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+.firstWrapper{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.linkDiv {
+    display: flex;
+    gap: 20px;
+}
+
+.Links {
+    color: var(--textSoft);
+    font-size: large;
+}
+
+.linkActive {
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    gap: 25px;
+    cursor: pointer;
+}
+
+.butt,
+.butto {
+    padding: 20px;
+    width: 120px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--btnSoft);
+    color: var(--text);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.butt {
+    background-color: var(--btn);
+}
+
+
+

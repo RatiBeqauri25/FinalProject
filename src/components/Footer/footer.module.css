@@ -1,0 +1,11 @@
+.container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.link {
+    color: #4b6cf7;
+}
