@@ -1,0 +1,108 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  width: 600px;
+}
+
+.bottom,
+.top {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+}
+
+.third,
+.fourth,
+.second,
+.fifth,
+.first {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  width: 100%;
+}
+
+.name,
+.email,
+.phone,
+.subject {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  background-color: var(--bg);
+  outline: none;
+  border: none;
+  border-bottom: solid var(--textSoft) 1px;
+  color: white;
+  padding-left: 0px;
+}
+
+.name:focus,
+.email:focus,
+.phone:focus,
+.subject:focus,
+.message:focus {
+  border-bottom: solid white 1px;
+}
+
+.message {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: 20px;
+  background-color: var(--bg);
+  outline: none;
+  border: none;
+  border-bottom: solid var(--textSoft) 1px;
+  color: white;
+  padding-left: 0px;
+}
+
+.fifth {
+  width: 100%;
+  height: 150px;
+}
+
+.button {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--btn);
+  color: var(--text);
+  padding: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    width: 400px;
+  }
+}
+
+@media (max-width: 540px) {
+  .top,
+  .bottom {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 430px) {
+  .wrapper {
+    width: 280px;
+    height: 300px;
+  }
+}
