@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
     <div className={styles.container}>
       <div className={styles.top}>
         <div className={styles.imgContainer}>
-          <Link href="/contact">
+          <Link href={`/blog/${post.id}`}>
             <Image
               src={
                 post.img ??

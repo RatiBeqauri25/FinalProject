@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     gap: 15px;
-}
+} 
 
 .Intro {
     display: flex;
@@ -16,7 +16,7 @@
 
 .Intro h1 {
     text-align: center;
-}
+} 
 .desc {
     color: var(--textSoft);
     text-align: center;
