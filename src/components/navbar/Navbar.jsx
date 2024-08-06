@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className={styles.firstWrapper}>
         <div className={styles.logo}>
           <Link href="/">
-            <Image src="/logo.webp" fill className={styles.logoImg} />
+            <Image src="/logo.png" fill className={styles.logoImg} />
           </Link>
         </div>
         <div className={styles.linkDiv}>
