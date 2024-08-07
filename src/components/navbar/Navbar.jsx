@@ -21,12 +21,12 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo1}>
-      <Image src="/logo.png" fill className={styles.logoImg1} />
+      <Image alt="Logo" src="/logo.png" fill className={styles.logoImg1} />
       </div>
       <div className={styles.firstWrapper}>
         <div className={styles.logo}>
           <Link href="/">
-            <Image src="/logo.png" fill className={styles.logoImg} />
+            <Image alt="Logo" src="/logo.png" fill className={styles.logoImg} />
           </Link>
         </div>
         <div className={styles.linkDiv}>
@@ -48,7 +48,7 @@ const Navbar = () => {
         <Link href="/register"><button className={styles.butto}>Register</button></Link>
       </div>
       <div className={styles.menu}>
-      <Image src="/menu.webp" fill className={styles.menuImg} onClick={() => 
+      <Image alt="Menu" src="/menu.webp" fill className={styles.menuImg} onClick={() => 
       setActive((o) => {
         return !o
       })
