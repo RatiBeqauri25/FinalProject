@@ -24,11 +24,12 @@
 .imgContainer {
     width: 70%;
     height: 600px;
-    position: relative;
-}
+    position: relative;}
 
 .Img {
     object-fit: cover;
+    border-radius: 10px;
+
 }
 
 .bottom {

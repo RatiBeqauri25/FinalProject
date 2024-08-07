@@ -17,7 +17,7 @@ const singleBlog = async ({ params }) => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-        <Image alt='Photo' fill src={post.img ?? 'https://images.pexels.com/photos/16525672/pexels-photo-16525672/free-photo-of-sand-dunes-in-the-desert.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} className={styles.Img}/>
+        <Image alt='Photo' fill src={post.img ?? 'https://images.pexels.com/photos/18779594/pexels-photo-18779594/free-photo-of-person-in-an-alien-costume-standing-on-a-rocky-surface.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} className={styles.Img}/>
       </div>
       <div className={styles.bottom}>
         <div className={styles.description}>
