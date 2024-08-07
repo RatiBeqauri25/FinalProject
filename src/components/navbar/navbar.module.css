@@ -80,8 +80,10 @@
         display: block;
         width: 70px;
         height: 70px;
-        position: relative;
+        position: fixed;
         z-index: 2;
+        left: 10px;
+
     }
 
     .menu {
