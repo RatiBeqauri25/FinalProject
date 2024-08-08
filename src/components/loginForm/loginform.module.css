@@ -47,6 +47,7 @@
 
 .inLine {
     color: var(--textSoft);
+    font-size: 16px;
 }
 
 .text {
@@ -75,6 +76,11 @@
     cursor: pointer;
 }
 
+.line {
+    width: 30%;
+    border: 1px solid var(--textSoft);
+}
+
 .git,
 .google {
     display: none;
@@ -83,6 +89,18 @@
 @media (max-width:850px) {
     .text {
         width: 100%;
+    }
+
+    .line {
+        width: 20%;
+    }
+
+
+}
+
+@media (max-width:650px) {
+    .line {
+        display: none;
     }
 }
 
@@ -114,7 +132,7 @@
     }
 }
 
-@media (max-width:430px) {
+@media (max-width:450px) {
     .container{
         padding-left: 15px;
         padding-right: 15px;
@@ -129,5 +147,14 @@
     .button {
         width: 100px;
         font-size: 12px;
+    }
+}
+
+@media (max-width:300px) {
+    .linkWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

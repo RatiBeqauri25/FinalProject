@@ -24,13 +24,13 @@ const LoginForm = () => {
       <div className={styles.top}>
         <h3 className={styles.title}>Sign in with Social Media</h3>
         <div className={styles.linkWrapper}>
-          <Link href="" className={styles.link}>
+          <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className={styles.link}>
             <div className={styles.google}>
               <Image src="/google.png" fill alt="Photo"/>
             </div>
             <span className={styles.span}>Sign in with Google</span>
           </Link>
-          <Link href="" className={styles.link}>
+          <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className={styles.link}>
             <div className={styles.git}>
               <Image src="/git.png" fill alt="Photo" />
             </div>
@@ -38,7 +38,9 @@ const LoginForm = () => {
           </Link>
         </div>
         <div className={styles.lineWrapper}>
+          <hr className={styles.line}/>
           <p className={styles.inLine}>Or Sign in with your Username</p>
+          <hr className={styles.line}/>
         </div>
       </div>
       <div className={styles.wrapper}>
@@ -52,6 +54,7 @@ const LoginForm = () => {
             onChange={(event) => {
               return setUsername(event.target.value);
             }}
+            required
           />
         </div>
         <div className={styles.label}>
@@ -64,6 +67,7 @@ const LoginForm = () => {
             onChange={(event) => {
               return setPassword(event.target.value);
             }}
+            required
           />
         </div>
       </div>
