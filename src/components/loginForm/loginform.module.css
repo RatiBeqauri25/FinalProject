@@ -1,0 +1,133 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: rgb(28, 35, 45);
+    padding: 60px;
+    
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.linkWrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.link {
+    background-color: rgb(44, 52, 67);
+    padding: 20px;
+    border-radius: 6px;
+    color: var(--textSoft);
+}
+
+.lineWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.inLine {
+    color: var(--textSoft);
+}
+
+.text {
+    width: 300px;
+    background-color: rgb(28, 35, 45);
+    border: none;
+    outline: none;
+    border-bottom: solid 1px var(--textSoft);
+    color: white;
+    font-size: 18px;
+    height: 60px;
+}
+
+.text:focus {
+    border-bottom: solid 1px white;
+}
+
+.button {
+    background-color: var(--btn);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.git,
+.google {
+    display: none;
+}
+
+@media (max-width:850px) {
+    .text {
+        width: 100%;
+    }
+}
+
+@media (max-width:620px) {
+    .link {
+        font-size: 12px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .span {
+        display: none;
+    }
+
+    .google {
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+    }
+
+    .git {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width:430px) {
+    .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .google,
+    .git {
+        width: 15px;
+        height: 15px;
+    }
+
+    .button {
+        width: 100px;
+        font-size: 12px;
+    }
+}
