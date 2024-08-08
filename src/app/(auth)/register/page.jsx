@@ -135,7 +135,7 @@ const registerPage = () => {
             <input
               type="email"
               id="email"
-              placeholder="Example@gmail.com"
+              placeholder="lukamasmadloba<3@gmail.com"
               className={styles.text}
               required
               onChange={(event) => {
