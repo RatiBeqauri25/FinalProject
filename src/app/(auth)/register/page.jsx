@@ -3,9 +3,11 @@
 import Link from "next/link";
 import styles from "./register.module.css";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const registerPage = () => {
+  const inputRef = useRef(null);
+
   const [userData, setUserData] = useState({
     firstname: "",
     lastname: "",
@@ -22,32 +24,43 @@ const registerPage = () => {
       return setError("Your FirstName must be between 1 - 20");
     } else if (userData.lastname.length == 0 || userData.lastname.length > 20) {
       return setError("You LastName must be between 1 - 20");
-    } else if(userData.age == 0){
-      return setError("You must enter an age between 14 - 100")
-    }else if (parseInt(userData.age) < 14 || parseInt(userData.age) > 100) {
+    } else if (userData.age == 0) {
+      return setError("You must enter an age between 14 - 100");
+    } else if (parseInt(userData.age) < 14 || parseInt(userData.age) > 100) {
       return setError("You must be older than 14");
     } else if (!userData.email.includes("@")) {
       return setError("You must enter a VALID email");
     } else if (userData.password.length == 0 || userData.password.length > 30) {
       return setError("Your password must be between 0 - 30");
-    } else if (userData.rePassword.length == 0 || userData.rePassword.length > 30) {
+    } else if (
+      userData.rePassword.length == 0 ||
+      userData.rePassword.length > 30
+    ) {
       return setError("Retype your password");
     } else if (userData.password !== userData.rePassword) {
       return setError("Passwords dont match");
     } else {
-      setError("")
+      setError("");
     }
   };
 
   const handleRegister = async (event) => {
     event.preventDefault();
     validateUser();
-    const result = await fetch('https://dummyjson.com/users/add', {
+    const result = await fetch("https://dummyjson.com/users/add", {
       method: "POST",
-      headers: {"content-type":"application/json",},
-      body: JSON.stringify(userData)
-    }).then(res => res.json()).then(res => console.log(res))
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(userData),
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res));
   };
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
 
   return (
     <form className={styles.container}>
@@ -58,6 +71,7 @@ const registerPage = () => {
           <Link
             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             className={styles.link}
+            target="_blank"
           >
             <div className={styles.google}>
               <Image src="/google.png" fill alt="Photo" />
@@ -67,6 +81,7 @@ const registerPage = () => {
           <Link
             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             className={styles.link}
+            target="_blank"
           >
             <div className={styles.git}>
               <Image src="/git.png" fill alt="Photo" />
@@ -86,6 +101,7 @@ const registerPage = () => {
           <div className={styles.label}>
             <label htmlFor="user">FirstName</label>
             <input
+              ref={inputRef}
               type="text"
               id="user"
               placeholder="Madona"
