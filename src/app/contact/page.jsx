@@ -1,11 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./contact.module.css";
 
 const ContactPage = () => {
+  const inputRef = useRef(null);
+
   const [active, setActive] = useState(false);
-  console.log(active);
+
+  useEffect( () => {
+    if(inputRef.current){
+      inputRef.current.focus()}
+  }, [])
+
   return (
     <form action="" className={styles.container}>
       <div className={styles.wrapper}>
@@ -13,6 +20,7 @@ const ContactPage = () => {
           <div className={styles.first}>
             <label htmlFor="name">Your name</label>
             <input
+            ref={inputRef}
               type="text"
               id="name"
               placeholder="Full Name"
